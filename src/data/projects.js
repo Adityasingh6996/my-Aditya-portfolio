@@ -2,31 +2,49 @@
 
 const projects = [
   {
-    id: 1, // Unique ID for each project
-    title: "My First React Portfolio",
-    description: "A responsive personal portfolio website built with React and styled using Tailwind CSS.",
-    image: "/images/portfolio-thumbnail.png", // This image needs to be in your 'public/images/' folder
-    githubLink: "https://github.com/yourusername/my-tarun-style-portfolio", // REPLACE with your actual GitHub repo link
-    liveDemoLink: "https://your-portfolio-demo.vercel.app", // REPLACE with your future Vercel deployed link
+    id: 1,
+    title: "EXAMNIFY: Online Examination Platform",
+    description: "A secure and scalable web-based platform designed to streamline the online examination process for educational institutions. The system supports both administrative and student workflows through authenticated, role-specific dashboards.",
+    features: [
+      "Google OAuth Integration for secure login and authentication",
+      "Role-Based Access Control to differentiate functionalities for students and administrators",
+      "Bulk Question Upload via CSV files to enable fast and efficient exam setup",
+      "Automated Email Notifications to send test results directly to candidates",
+      "Dashboard Views for tracking user activity, test statistics, and exam performance"
+    ],
+    technologies: ["Node.js", "Express.js", "MongoDB", "HTML5", "CSS3", "JavaScript"],
+    githubLink: "https://github.com/Pradumn88/online-exam-platform.git",
+    liveLink: "",
+    image: "/images/project-examnify.png" // Direct public path
   },
   {
     id: 2,
-    title: "E-commerce Store Concept",
-    description: "A mock online store frontend demonstrating product listings, cart functionality, and user authentication.",
-    image: "/images/ecommerce-thumbnail.png", // Needs to be in 'public/images/'
-    githubLink: "https://github.com/yourusername/ecommerce-concept",
-    liveDemoLink: "", // Leave empty if no live demo
+    title: "Codsoft Virtual Internship Projects",
+    description: "A collection of interactive Java-based console applications developed as part of the Codsoft Virtual Internship. These projects demonstrate foundational programming concepts and problem-solving skills.",
+    features: [
+      "Task 1: Number Guessing Game - Console-based interactive game with score tracking and replay.",
+      "Task 2: Student Grade Calculator - Java program to calculate average score and assign letter grades based on input marks.",
+      "Task 3: Student Management System - Menu-driven application for managing student records using OOP principles."
+    ],
+    technologies: ["Java", "Scanner", "Random", "OOP", "ArrayList", "Conditionals", "Arithmetic Operations"],
+    githubLink: "https://github.com/Adityasingh6996/CODSOFT.git",
+    liveLink: "",
+    image: "/images/project-codsoft.png" // Direct public path
   },
   {
     id: 3,
-    title: "Task Management App",
-    description: "A simple full-stack task management application with a MERN stack, allowing users to create, update, and delete tasks.",
-    image: "/images/task-app-thumbnail.png", // Needs to be in 'public/images/'
-    githubLink: "https://github.com/yourusername/task-manager-mern",
-    // liveDemoLink: "https://task-manager-demo.netlify.app", // Example
+    title: "House Rent Prediction System (2024)",
+    description: "Developed a regression model using XGBoost achieving an 87% R² score for predicting house rent prices. Deployed an interactive user interface using Streamlit for real-time predictions.",
+    features: [
+      "Regression model developed with XGBoost (87% R² score).",
+      "Interactive UI deployed using Streamlit for real-time predictions.",
+      "Implemented robust data preprocessing and hyperparameter tuning for optimal model performance."
+    ],
+    technologies: ["Python", "XGBoost", "Pandas", "Scikit-learn", "Streamlit", "NumPy"],
+    githubLink: "https://github.Adityasingh6996/CODSOFT.git",
+    liveLink: "",
+    image: "/images/project-house-rent.png" // Direct public path
   },
-  // Add more of your projects here!
-  // Make sure to include relevant images and links for each.
 ];
 
-export default projects; // Export the array so Projects.jsx can import it
+export default projects;

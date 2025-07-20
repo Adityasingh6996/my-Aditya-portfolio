@@ -5,7 +5,7 @@ import { Link } from 'react-scroll'; // Import Link from react-scroll
 function Navbar() {
   return (
     <nav className="bg-gray-800 p-4 text-white flex justify-between items-center fixed w-full z-10 top-0"> {/* Added fixed, w-full, z-10, top-0 for sticky nav */}
-      <div className="text-2xl font-bold">Aditya.</div> {/* Changed from 'YourName.' */}
+      <div className="text-2xl font-bold">Aditya Kumar Singh</div> {/* Changed from 'Aditya.' to 'Aditya Kumar Singh' */}
       <ul className="flex space-x-6">
         {/* Use Link component for smooth scrolling */}
         <li>
@@ -46,6 +46,16 @@ function Navbar() {
             className="hover:text-blue-400 transition duration-300 cursor-pointer"
           >
             Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="education" // Added this link for the Education section
+            smooth={true}
+            duration={500}
+            className="hover:text-blue-400 transition duration-300 cursor-pointer"
+          >
+            Education
           </Link>
         </li>
         <li>

@@ -1,16 +1,16 @@
 // src/components/About.jsx
 import React from 'react';
-import { motion } from 'framer-motion'; // Import motion
+import { motion } from 'framer-motion';
 
 function About() {
   return (
     <motion.section
       id="about"
       className="py-16 bg-gray-800 text-white"
-      initial={{ opacity: 0, y: 50 }} // Start slightly below and invisible
-      whileInView={{ opacity: 1, y: 0 }} // Animate to full visibility and original position when in view
-      viewport={{ once: true, amount: 0.3 }} // Play only once when 30% of element is in view
-      transition={{ duration: 0.8 }} // Animation duration
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
     >
       <div className="container mx-auto px-4 text-center">
         <motion.h2
@@ -29,9 +29,8 @@ function About() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          This is where your detailed "About Me" content will go.
-          Talk about your background, passions, what drives you, and your professional journey.
-          You can expand on this significantly.
+          I'm Aditya Kumar Singh, a driven Computer Science undergraduate specializing in Data Science at UPES, Dehradun. I have a solid foundation in machine learning, data analysis, and web development, backed by hands-on learning and virtual internship experience.
+          Skilled in Python, SQL, JavaScript, and data tools like Scikit-learn, Pandas, and Git, I enjoy solving real-world problems through code. I'm always eager to learn, build, and grow in dynamic tech environments.
         </motion.p>
       </div>
     </motion.section>

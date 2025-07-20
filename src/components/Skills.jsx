@@ -1,21 +1,48 @@
 // src/components/Skills.jsx
 import React from 'react';
+import { motion } from 'framer-motion';
+// Assuming a simpler skillsData structure for this older version
+import skillsData from '../data/skillsData';
 
 function Skills() {
   return (
-    <section id="skills" className="py-16 bg-gray-900 text-white"> {/* Added a dark background and text color */}
+    <motion.section
+      id="skills"
+      className="py-16 bg-gray-800 text-white" // Adjust background as per your original working version
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-8">My Skills</h2>
+        <motion.h2
+          className="text-4xl font-bold mb-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          My Skills
+        </motion.h2>
+        <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
+          Here are some of the technologies and tools I work with.
+        </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <span className="bg-blue-600 text-white px-4 py-2 rounded-lg text-lg">React</span>
-          <span className="bg-green-600 text-white px-4 py-2 rounded-lg text-lg">Tailwind CSS</span>
-          <span className="bg-yellow-600 text-white px-4 py-2 rounded-lg text-lg">JavaScript</span>
-          <span className="bg-red-600 text-white px-4 py-2 rounded-lg text-lg">HTML & CSS</span>
-          {/* Add more skill tags here */}
+          {skillsData.map((skill, index) => (
+            <motion.span
+              key={index}
+              className="bg-blue-600 text-white px-4 py-2 rounded-full text-lg shadow-md"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: 0.1 * index, duration: 0.5 }}
+            >
+              {skill}
+            </motion.span>
+          ))}
         </div>
-        <p className="mt-8 text-lg">This section will showcase all your technical abilities.</p>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

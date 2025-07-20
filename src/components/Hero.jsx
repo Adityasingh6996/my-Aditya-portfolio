@@ -1,45 +1,45 @@
 // src/components/Hero.jsx
 import React from 'react';
-import { motion } from 'framer-motion'; // Import motion
+import { motion } from 'framer-motion';
+// No need to import Link from react-scroll for a direct file download
 
 function Hero() {
   return (
-    <motion.section
-      id="home"
-      className="flex items-center justify-center min-h-screen bg-gray-900 text-white"
-      initial={{ opacity: 0 }} // Start completely transparent
-      animate={{ opacity: 1 }}  // Fade in to full opacity
-      transition={{ duration: 1 }} // Over 1 second
+    <section
+      id="home" // Ensure this ID matches your Navbar link
+      className="relative h-screen flex flex-col items-center justify-center text-white
+                 bg-gradient-to-br from-gray-900 to-indigo-950 overflow-hidden" // Added gradient and overflow-hidden
     >
+      {/* Subtle background elements for glow effect */}
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+      <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+      <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-600 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+
       <motion.div
-        className="text-center p-8"
-        initial={{ y: 50, opacity: 0 }} // Start 50px down and transparent
-        animate={{ y: 0, opacity: 1 }}   // Slide up to original position and fade in
-        transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }} // After 0.5s delay, over 0.8s
+        className="text-center z-10" // Ensure content is above background elements
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        <motion.h1 className="text-6xl font-extrabold"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-        >
-          Hi, I'm Aditya
-        </motion.h1>
-        <motion.p className="text-2xl mt-4"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-        >
+        <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          Hi, I'm <span className="text-blue-400">Aditya</span>
+        </h1>
+        <p className="text-xl md:text-2xl text-gray-300 mb-8">
           A Passionate Web Developer
-        </motion.p>
-        <motion.button className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.5 }}
+        </p>
+        {/* Download CV Button */}
+        <a
+          href="/Aditya_Resume.pdf" // Path to your CV in the public folder
+          download="Aditya_Resume.pdf" // This attribute prompts the download with this filename
+          className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700
+                     text-white font-bold py-3 px-8 rounded-full shadow-lg
+                     hover:shadow-xl transition duration-300 transform hover:scale-105 cursor-pointer"
         >
           Download CV
-        </motion.button>
+        </a>
       </motion.div>
-    </motion.section>
+    </section>
   );
 }
+
 export default Hero;
