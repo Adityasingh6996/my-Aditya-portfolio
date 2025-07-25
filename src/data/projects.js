@@ -14,7 +14,7 @@ const projects = [
     ],
     technologies: ["Node.js", "Express.js", "MongoDB", "HTML5", "CSS3", "JavaScript"],
     githubLink: "https://github.com/Pradumn88/online-exam-platform.git",
-    liveLink: "",
+    liveLink: "https://mediassist-ai-project.onrender.com/", // Live demo link added here
     image: "/images/project-examnify.png" // Direct public path
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     ],
     technologies: ["Java", "Scanner", "Random", "OOP", "ArrayList", "Conditionals", "Arithmetic Operations"],
     githubLink: "https://github.com/Adityasingh6996/CODSOFT.git",
-    liveLink: "",
+    liveLink: "", // Console-based, likely no live link unless deployed otherwise
     image: "/images/project-codsoft.png" // Direct public path
   },
   {
@@ -41,8 +41,8 @@ const projects = [
       "Implemented robust data preprocessing and hyperparameter tuning for optimal model performance."
     ],
     technologies: ["Python", "XGBoost", "Pandas", "Scikit-learn", "Streamlit", "NumPy"],
-    githubLink: "https://github.Adityasingh6996/CODSOFT.git",
-    liveLink: "",
+    githubLink: "https://github.com/Adityasingh6996/CODSOFT.git",
+    liveLink: "", // Add a live demo link here if deployed (e.g., Streamlit Cloud)
     image: "/images/project-house-rent.png" // Direct public path
   },
 ];
