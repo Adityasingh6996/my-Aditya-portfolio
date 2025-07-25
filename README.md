@@ -6,8 +6,7 @@ Welcome to my personal portfolio website! This modern, responsive portfolio show
 
 Visit my portfolio: [Live Site](https://your-portfolio-url.com)
 
-## → Table of Contents
-
+## → Table of Content
 - [About](#about)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
