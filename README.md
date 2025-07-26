@@ -20,6 +20,7 @@ Visit my portfolio: [Live Site](https://your-portfolio-url.com)
 - [Contact](#contact)
 - [License](#license)
 
+
 ## → About
 
 This portfolio website represents my journey as a computer science student and my passion for web development. As a student, I built this project to showcase my learning progress, academic projects, and technical skills. The site features a clean, modern design with responsive layouts that demonstrate my understanding of frontend development principles.
